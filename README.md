@@ -1,18 +1,18 @@
-# Mongoose CRUD Helper
+# Express Mongoose CRUD Helper
 
 This package provides a convenient way to create CRUD (Create, Read, Update, Delete) routes for Mongoose models in Express.js applications.
 
 ## Installation
 
 ```bash
-npm install mongoose-crud-helper
+npm install express-mongoose-crud-helper
 ```
 
 ## Usage
 
 ```javascript
 import express from "express";
-import CrudRouter from "mongoose-crud-helper";
+import CrudRouter from "express-mongoose-crud-helper";
 import YourModel from "./yourModel.js"; // Import your Mongoose model
 
 const app = express();
