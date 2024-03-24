@@ -1,0 +1,30 @@
+{
+  "name": "mongoose-crud-helper",
+  "version": "1.0.0",
+  "description": "Simplify CRUD operations for Mongoose models in Node.js with advanced features.",
+  "main": "./src/router.js",
+  "type": "module",
+  "keywords": [
+    "crud",
+    "node",
+    "express",
+    "mongodb",
+    "helper",
+    "mongoose",
+    "easy",
+    "fast"
+  ],
+  "homepage": "https://github.com/Obaa10/mongoose-crud-helper",
+  "bugs": {
+    "url": "https://github.com/Obaa10/mongoose-crud-helper/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Obaa10/mongoose-crud-helper.git"
+  },
+  "author": "Obada Al-Maleh <obada.maleh@gmail.com>",
+  "files": [
+    "src"
+  ],
+  "license": "MIT"
+}
