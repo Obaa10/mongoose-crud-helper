@@ -1,4 +1,4 @@
-# Express Mongoose CRUD Helper
+# Mongoose CRUD Helper
 
 This package provides a convenient way to create CRUD (Create, Read, Update, Delete) routes for Mongoose models in Express.js applications.
 
