@@ -1,5 +1,5 @@
 {
-  "name": "mongoose-crud-helper",
+  "name": "express-mongoose-crud-helper",
   "version": "1.0.0",
   "description": "Simplify CRUD operations for Mongoose models in Node.js with advanced features.",
   "main": "./src/router.js",
