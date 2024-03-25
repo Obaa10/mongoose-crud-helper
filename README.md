@@ -5,7 +5,7 @@ This package provides a convenient way to create CRUD (Create, Read, Update, Del
 ## Installation
 
 ```bash
-npm install express-mongoose-crud-helper
+npm install em-crud
 ```
 
 
@@ -31,7 +31,7 @@ npm install express-mongoose-crud-helper
 
 ```javascript
 import express from "express";
-import CrudRouter from "express-mongoose-crud-helper";
+import CrudRouter from "em-crud";
 import User from "./models/User.js"; // Import the Mongoose User model
 
 const app = express();
