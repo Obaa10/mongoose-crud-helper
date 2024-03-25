@@ -1,4 +1,4 @@
-import Crud from "./crud.controller.js";
+import Crud from "./controller.js";
 import express from "express";
 
 /**
