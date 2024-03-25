@@ -1,4 +1,4 @@
-import * as crud from "./crud.factory.js";
+import * as crud from "./factory.js";
 
 class Crud {
   constructor(className) {
