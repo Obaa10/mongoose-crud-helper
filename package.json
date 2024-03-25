@@ -1,7 +1,7 @@
 {
   "name": "em-crud",
-  "version": "1.0.0",
-  "description": "/'Express Mongoose CRUD/' Simplify CRUD operations for Mongoose models in Node.js with advanced features.",
+  "version": "1.0.1",
+  "description": "'Express Mongoose CRUD' Simplify CRUD operations for Mongoose models in Node.js with advanced features.",
   "main": "./src/router.js",
   "type": "module",
   "keywords": [
