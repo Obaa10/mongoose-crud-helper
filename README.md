@@ -8,22 +8,41 @@ This package provides a convenient way to create CRUD (Create, Read, Update, Del
 npm install express-mongoose-crud-helper
 ```
 
+
+## Parameters
+
+- `className`: Mongoose model class.
+- `setMiddlewares`: Array of middleware functions to be executed before handling requests that modify data (POST, PUT, DELETE).
+- `getMiddlewares`: Array of middleware functions to be executed before handling GET requests.
+
+
+## Get All Features
+| Feature       | Description                                                                                                          |
+|---------------|----------------------------------------------------------------------------------------------------------------------|
+| Count         | Retrieve the total count of documents based on specified query criteria.                                             |
+| Sorting       | Sort the retrieved documents based on specified fields and order.                                                    |
+| Limit Fields  | Select specific fields to be included or excluded from the retrieved documents.                                      |
+| Pagination    | Enable paginated retrieval of documents, controlling the number of documents per page and navigating through pages. <br> Use `page` and `limit` query parameters to control pagination. |
+| Population    | Populate referenced fields in the retrieved documents, enabling retrieval of associated data from other collections. |
+
+
+
 ## Usage
 
 ```javascript
 import express from "express";
 import CrudRouter from "express-mongoose-crud-helper";
-import YourModel from "./yourModel.js"; // Import your Mongoose model
+import User from "./models/User.js"; // Import the Mongoose User model
 
 const app = express();
 
-// Example middleware functions
+// Create middleware functions
 const setMiddlewares = [];
 const getMiddlewares = [];
 
-// Create CRUD routes for your model
-app.use("/api/yourModel", CrudRouter({ 
-  className: YourModel, 
+// Create a route to handle GET requests for users
+app.get("/api/users", CrudRouter({ 
+  className: User, 
   setMiddlewares, 
   getMiddlewares 
 }));
@@ -32,9 +51,6 @@ app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
 ```
-
-## Parameters
-
-- `className`: Mongoose model class.
-- `setMiddlewares`: Array of middleware functions to be executed before handling requests that modify data (POST, PUT, DELETE).
-- `getMiddlewares`: Array of middleware functions to be executed before handling GET requests.
+```
+/api/users?sort=-createdAt&page=1&limit=10
+```
