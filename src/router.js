@@ -7,7 +7,7 @@ import express from "express";
  * @param {Array}  getMiddlewares
  */
 
-export default ({ className, setMiddlewares, getMiddlewares }) => {
+export default ({ className, setMiddlewares = [], getMiddlewares = [] }) => {
   const router = express.Router();
   const crud = new Crud(className);
 
