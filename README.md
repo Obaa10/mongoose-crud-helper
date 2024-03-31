@@ -51,6 +51,37 @@ app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
 ```
+### The new auto generated APIs
+#### Get One By Id
 ```
-/api/users?sort=-createdAt&page=1&limit=10
+GET /api/users/:id
+```
+#### Create One
+```
+POST /api/users/
+body:{
+  full_name: "admin",
+  email: "admin@gmail.com
+}
+```
+#### Update One
+```
+PUT /api/users/:id
+body:{
+  full_name: "admin",
+  email: "admin@gmail.com
+}
+```
+#### Delete One
+```
+DELETE /api/users/:id
+```
+#### Get All With Filters
+```
+GET /api/users
+query: {
+  sort=-createdAt
+  page=1
+  limit=10
+}
 ```
