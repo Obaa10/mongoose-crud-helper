@@ -51,6 +51,28 @@ app.listen(3000, () => {
   console.log("Server is running on port 3000");
 });
 ```
+in the recent example any one can add and delete users because we did't set and setMiddlewares.
+Now lets add some role for adding and deleting users.
+
+```javascript
+....
+import AuthToken from "./middleware/authentication.js"; //Import our AuthToken middleware
+import {admin} from "./middleware/authorization.js"; //Import admin authorization middleware
+
+const setMiddlewares = [AuthToken,admin];
+const getMiddlewares = [AuthToken];
+
+// Create a route to handle GET requests for users
+app.get("/api/users", CrudRouter({ 
+  className: User, 
+  setMiddlewares, 
+  getMiddlewares 
+}));
+....
+```
+In this case only admin can add and delete users.
+And all authorized users can use get by id and get all.
+
 ### The new auto generated APIs
 #### Get One By Id
 ```
