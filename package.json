@@ -1,8 +1,9 @@
 {
   "name": "em-crud",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "'Express Mongoose CRUD' Simplify CRUD operations for Mongoose models in Node.js with advanced features.",
   "main": "./src/router.js",
+  "typings": "/src/main.d.ts",
   "type": "module",
   "keywords": [
     "crud",
@@ -26,5 +27,8 @@
   "files": [
     "src"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.4.5"
+  }
 }
